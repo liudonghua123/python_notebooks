@@ -1,0 +1,3 @@
+pyexcel
+pyexcel-xls
+pyexcel-xlsx
