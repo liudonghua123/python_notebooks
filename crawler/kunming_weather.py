@@ -14,9 +14,9 @@ class KunmingWeather:
         weather_kunming_7days = []
         for day in range(7):
             weather_kunming_7days.append({
-                "date": self.soup.select("li.sky.skyid")[0].find_all('h1')[0].text,
-                "weather": self.soup.select("li.sky.skyid")[0].select('p.wea')[0].text.strip(),
-                "temperature": self.soup.select("li.sky.skyid")[0].select('p.tem')[0].text
+                "date": self.soup.select("li.sky.skyid")[day].find_all('h1')[0].text,
+                "weather": self.soup.select("li.sky.skyid")[day].select('p.wea')[0].text.strip(),
+                "temperature": self.soup.select("li.sky.skyid")[day].select('p.tem')[0].text
             })
         return weather_kunming_7days
     
